@@ -37,7 +37,7 @@ function App() {
         return <About/>
     }
   }
-
+  // TODO background gradient
   return (
     <div className="flex h-screen bg-slate-700 flex-col">
       <Transition show={!isLoading} enter="transition-opacity duration-1000"
