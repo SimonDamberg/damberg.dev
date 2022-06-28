@@ -1,0 +1,15 @@
+apiVersion: apps/v1
+kind: Ingress
+metadata:
+  name: ingress-damberg-dev
+  namespace: damberg-dev
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: damberg.dev
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: nginx-nodeport
+          servicePort: 80
