@@ -16,7 +16,7 @@ spec:
       containers:
       - name: nginx
         image: nginx:stable
-        imagePullPolicy: always
+        imagePullPolicy: Always
         ports:
         - containerPort: 443
           name: web
