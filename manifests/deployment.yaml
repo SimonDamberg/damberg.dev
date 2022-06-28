@@ -22,6 +22,8 @@ spec:
           name: web
           protocol: TCP
         readinessProbe:
+          initialDelaySeconds: 300
+          periodSeconds: 30
           httpGet:
             port: web
             path: /
