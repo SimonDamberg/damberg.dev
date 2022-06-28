@@ -1,0 +1,19 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: damberg-dev
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: damberg-dev
+  template:
+    metadata:
+      labels:
+        app: damberg-dev
+    spec:
+      containers:
+      - name: react-docker
+        image: damberg-dev
+        ports:
+        - containerPort: 443
