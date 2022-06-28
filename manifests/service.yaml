@@ -1,15 +1,15 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: damberg-dev-balancer
-  labels:
-    app: damberg-dev
+  name: nginx-nodeport
+  namespace: damberg-dev
 spec:
-  type: LoadBalancer
+  type: NodePort
+  selector:
+    app: nginx
   ports:
-  - port: 443
-    targetPort: 443
+  - name: web
+    port: 443
+    targetPort: web
     protocol: TCP
     nodePort: 30000
-  selector:
-    app: damberg-dev
