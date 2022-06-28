@@ -9,7 +9,7 @@ spec:
     app: nginx
   ports:
   - name: web
-    port: 443
+    port: 80
     targetPort: web
     protocol: TCP
     nodePort: 30000
